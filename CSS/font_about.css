@@ -1,15 +1,78 @@
+/* 意义不明的各种字串( */
 .bubble {
-    display: inline-block;
+    /* display: inline-block; */
+    width:fit-content;
     padding: 10px 30px;
     background-color: #17d0be;
     border-radius: 40px;
     font-size: 16px;
     max-width: 300px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: gold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-span a {
-    display: inline-block;
-    color: gold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* 待做事项 */
+.check_list {
+    max-width: min-content;
+    min-width: 440px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: rgba(255, 207, 15, 0.39); */
+    background: linear-gradient(180deg, #ffe60585 5%, white, #ffe60585 95%);
+    box-shadow: 0px 0px 30px rgba(252, 227, 2, 0.493);
 }
+.check_list p {
+    font-size: 15px;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.check_list img{
+    height: 20px;
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+}
+
+
+/* 学习计划 */
+.Learning_plan {
+    max-width: min-content;
+    min-width: 440px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: rgba(255, 207, 15, 0.39); */
+    background: linear-gradient(90deg, #11e93f85 5%, white);
+    box-shadow: 0px 0px 30px rgba(252, 227, 2, 0.493);
+}
+.Learning_plan p {
+    font-size: 15px;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Learning_plan img{
+    height: 20px;
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+}
+
+
+/* 建站计划 */
+.makeweb_plan {
+    /* max-width: max-content; */
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 400px;
+    margin: 30px;
+    margin-right: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: rgba(255, 207, 15, 0.39); */
+    background: linear-gradient(125deg, white, #05ffff85);
+    box-shadow: 0px 0px 30px rgba(252, 227, 2, 0.493);
+    float: right;
+}
+

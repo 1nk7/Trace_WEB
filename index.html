@@ -14,11 +14,12 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-attachment: fixed;
+            padding-top: 70px;
         }
 
         /* 导航栏 */
         .navigation_bar {
-            height: 90px;
+            height: 70px;
             width: 100%;
             background: linear-gradient(90deg, rgb(127, 144, 151), rgb(18, 156, 215), rgb(127, 144, 151));
             position: fixed;
@@ -26,18 +27,48 @@
             left: 0px;
             z-index: 10;
         }
+        /* 导航栏标题 */
         .navigation_bar h1 {
+            width: min-content;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 70px;
+            font-size: 55px;
             line-height: 0%;
             color: rgb(248, 190, 55);
-            /* text-align: center; */
-            position: relative;
+            /* display: inline-block; */
+            position: absolute;
             top: 0px;
-            left: 42%;
+            left: 44%;
         }
+        /* 导航栏跳转选项容器，flex做排布 */
+        .navigation_bar p {
+            margin-left: 300px;
+            margin-right: 300px;
+            display: inline-block;
+            display: flex;
+            padding-top: 6px;
+            flex-direction: row;
+            justify-content: space-between;
 
+        }
+        /* 导航栏跳转选项链接，相对定位调整了下位置 */
+        .navigation_bar a {
+            display: inline-block;
+            color: rgb(178, 214, 255);
+            font-size: 100%;
+            /* padding: 10px; */
+            margin-left: 10px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            position: relative;
 
+        }
+        /* 鼠标悬停变化，放大+变色+出阴影 */
+        .navigation_bar a:hover {
+            color: rgb(255, 174, 0);
+            text-shadow: 2px 2px 6px rgb(253, 94, 2);
+            transform: scale(1.2);
+        }
     </style>
 
 </head>
@@ -45,41 +76,55 @@
 <body>
     <!-- 导航栏 -->
     <div class="navigation_bar">
+        <!-- <a style="left: 18%;">A</a> -->
+        <!-- <a style="left: 30%;">B</a> -->
+        <p>
+            <a href="111" style="left: 50px;">AAAAAA</a>
+            <a href="111" style="right: 50px;">BBBBBB</a>
+            <a href="notice_board.html" style="left: 50px;">小本本</a>
+            <a href="website_collects.html" style="right: 50px;">常用网站</a>
+        </p>
         <h1>TRACE</h1>
+        <!-- <a style="right: -50%;">C</a> -->
+        <!-- <a style="right: -62%;">D</a> -->
     </div>
     <!-- 头像 -->
     <img class="head_picture" src="./.pictures/头像.jpg" alt="我头呢??">
-    <div>
-        <span class="bubble" style="margin-top: 100px;">
-            <a>Hello, Worldeeeeeeeeer~</a>
-        </span>
-    </div>
+    <!-- <div> -->
 
+    <p class="bubble">Hello, Worldeeeeeeeeer~</p>
+    <p class="bubble">灵感菇--里故里故里↗灵感灵感菇~灵感菇</p>
+
+
+    <!-- </div> -->
 
     <br />
-
     <br />
 
-    <a href="https://fanyi.baidu.com/mtpe-individual/multimodal#/zh/en/" target="_blank">百度翻译</a>
 
+
+    <!-- 成长轨迹 -->
     <div class="styles_history">
-        
         <p>这里展示一下这个小破网页随着我的学习发生的的变化</p>
         <div>
             <img src="./.pictures/7月21日.png" alt="25.7.21">
-            <br/>
+            <br />
             <a>25.7.21-刚刚简单过完html+css</a>
         </div>
         <div>
+            <img src="./.pictures/7月23日.png" alt="25.7.23">
+            <br/>
+            <a>25.7.23-进一步学习了各种css属性，添加了一些花里胡哨的动效</a>
         </div>
     </div>
-
 
     <br />
 
     <div class="photo_frame">
         <h3>最近的游戏</h3>
-        <img src="./.pictures/p5r.png" alt="p5r"/>
+        <a href="https://www.xiaoheihe.cn/app/topic/game/pc/1687950">
+            <img src="./.pictures/p5r.png" alt="p5r" />
+        </a>
     </div>
 
     <div style="margin-top: 1000px;
