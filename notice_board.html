@@ -16,7 +16,31 @@
             background-attachment: fixed;
             padding-top: 70px;
         }
+        .text_add {
+            position: absolute;
+            bottom: 30px;
+            /* align-items: end; */
+        }
     </style>
+    <script src="./javascript/checkbox_saver.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            // alert("hello");
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/save_datas/webplan_saves.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    const target_ele = document.querySelector(".makeweb_plan > form.text_add");
+                    target_ele.insertAdjacentHTML("afterend", xhr.responseText);
+                }
+            };
+            xhr.send();
+        });
+
+        function testoutput(obj) {
+            alert("该功能未实现awa\n输入内容："+obj.value)
+        }
+    </script>
 </head>
 
 <body>
@@ -27,7 +51,7 @@
     <!-- 辅助布局的大容器 -->
     <div style="float: left;margin-left: 70px;">
         <!-- 待做事项 -->
-        <div class="check_list">
+        <!-- <div class="check_list">
             <p>在网页左侧helloworld下方加一个待办清单 <img src="./.pictures/勾选.png" alt="111"></p>
             <p>给顶端的导航栏加入跳转选项 <img src="./.pictures/勾选.png" alt="111"></p>
             <p>添加一个跳转到网站导航页的页面 <img src="./.pictures/勾选.png" alt="111"></p>
@@ -35,18 +59,32 @@
             <p>把待办清单、对网站的想法再加一个学习计划另起一个网页 <img src="./.pictures/勾选.png" alt="111"></p>
             <p>将初具雏形的网页部署到服务上 <img src="./.pictures/未勾选.png" alt="111"></p>
             <p> <img src="./.pictures/未勾选.png" alt="111"></p>
-        </div>
+        </div> -->
+        <form class="check_list">
+            <p>在网页左侧helloworld下方加一个待办清单 <input type="checkbox" name="cb1"></p>
+            <p>给顶端的导航栏加入跳转选项 <input type="checkbox" name="cb2"></p>
+            <p>添加一个跳转到网站导航页的页面 <input type="checkbox" name="cb3"></p>
+            <p>加一个对网页的想法(可能离实现比较遥远的) <input type="checkbox" name="cb4"></p>
+            <p>把待办清单、对网站的想法再加一个学习计划另起一个网页 <input type="checkbox" name="cb5"></p>
+            <p>将初具雏形的网页部署到服务上 <input type="checkbox" name="cb6"></p>
+            <p>将AJAX接口替换成fetchAPT <input type="checkbox" name="cb7"></p>
+            <p>给“网站想法”添加增删条目功能 <input type="checkbox" name="cb7"></p>
+            <button type="button" onclick="save_CBstate()">保存</button>
+        </form>
         <!-- 学习计划 -->
         <div class="Learning_plan">
-            <p>JavaScript初步学习</p>
+            <p>fetchAPT学习</p>
+            <p>php学习完善</p>
         </div>
     </div>
     <!-- 建站计划 -->
     <div class="makeweb_plan">
-        <p>为导航栏添加更多的选项，以及对应的子网页</p>
-        <p>把主要功能分化到子网页后，将主页面作为“个人网页”，只用于展示一些好看的设计、以及其他功能网页的跳转方式</p>
-        <p></p> 
+        <form class="text_add" method="get">
+            <input type="text" onchange="testoutput(this)">
+        </form>
     </div>
+
+
 </body>
 
 </html>

@@ -74,5 +74,6 @@
     background: linear-gradient(125deg, white, #05ffff85);
     box-shadow: 0px 0px 30px rgba(252, 227, 2, 0.493);
     float: right;
+    position: relative;
 }
 
